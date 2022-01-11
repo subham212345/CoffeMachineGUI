@@ -1,11 +1,14 @@
 from tkinter import *
+from datetime import date, datetime
 
-
+today = date.today()
+now = datetime.now()
 window = Tk()
 window.title("Coffee Machine")
 window.config(height=600, width=400, padx=25, pady=25)
 
-
+date_today = today.strftime("%b-%d-%Y")
+date_time = now.strftime("%H:%M:%S")
 # Creating the menu
 MENU = {
     "espresso": {
@@ -78,9 +81,14 @@ def update_resources(drink_name, order_ingredient):
     message_result.config(text=f"Here is your {drink_name} ☕️. Enjoy!")
 
 
+
 def off():
     message_result.config(text="The machine has turned off!! \n"
                                "Turn it on from the options tab at top left of the window")
+    lines = str(date_today) + " : " + str(date_time) + "---" + str(profit)
+    with open('collection_logs.txt', 'a') as f:
+        f.writelines(lines)
+        f.write('\n')
     latte_button.config(state=DISABLED)
     espresso_button.config(state=DISABLED)
     cappuccino_button.config(state=DISABLED)
