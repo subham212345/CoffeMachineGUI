@@ -6,8 +6,9 @@ The program creates a Graphical User Interface mimicking a coffee machine.<br />
 * The program gives a success message if the machine has sufficient resources for the order. <br />
  If there is not enough resources, then the program gives a message informing the user about which of the resources is not sufficient. <br />
 * The user can refill the resources by clicking on the "Refill Resource" button.<br />
-* The user can generate a report by clicking on the "Report" button, which will provide the current quantity of resources, as well as current proffit.<br />
+* The user can generate a report by clicking on the "Report" button, which will provide the current quantity of resources, as well as current profit.<br />
 * The user can turn the machine off by clicking on the button, "Turn Off". <br />
+  A log with current date and time and profit value in that session will be recorded in a text file everytime the user turns off the machine
 * The user can turn the machine back on, without running the program again by clicking "Turn the machine On" from "Options" at top left. <br />
 
 
